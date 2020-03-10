@@ -11,14 +11,29 @@
         <!--Tweets-->
         <scene sceneID="nCq-Jd-WBn">
             <objects>
-                <viewController id="Rdc-Rr-jH5" sceneMemberID="viewController">
+                <viewController id="Rdc-Rr-jH5" customClass="HomeViewController" customModule="PlatziTweets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gls-ix-7Ow">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gEe-T3-TCH">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2s5-Ww-xzi" firstAttribute="bottom" secondItem="gEe-T3-TCH" secondAttribute="bottom" id="3kb-9A-opq"/>
+                            <constraint firstItem="2s5-Ww-xzi" firstAttribute="trailing" secondItem="gEe-T3-TCH" secondAttribute="trailing" id="TWn-90-xNk"/>
+                            <constraint firstItem="gEe-T3-TCH" firstAttribute="top" secondItem="2s5-Ww-xzi" secondAttribute="top" id="UkL-K0-evA"/>
+                            <constraint firstItem="gEe-T3-TCH" firstAttribute="leading" secondItem="2s5-Ww-xzi" secondAttribute="leading" id="fSi-OQ-ENn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2s5-Ww-xzi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tweets" id="OEk-o9-Ylh"/>
+                    <connections>
+                        <outlet property="tableView" destination="gEe-T3-TCH" id="COH-dd-fHu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8G-OI-AvO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,7 +45,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CNL-3f-ZYe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="pId-d2-oya">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
